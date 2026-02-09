@@ -6,7 +6,7 @@
     <body>
         <header>
             <h1><a href="/">Arjun's blog</a></h1>
-        </header>
+        <!-- </header>
             <time>published: 06/02/2026, 12:04</time>
             <h2><a href="">My first blog</a></h2>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos incidunt hic sint exercitationem possimus. Architecto, voluptatum voluptate! Quis consectetur ea eius, ullam obcaecati earum. Veniam id sit amet modi a!</p>
@@ -14,6 +14,15 @@
             <time>published: 06/02/2026, 12:10</time>
             <h2><a href="">My second blog</a></h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto in facilis laborum ratione, ad illum hic reprehenderit assumenda modi vero! Deleniti sunt iure at sed voluptate, numquam consequuntur provident placeat!</p>
+        </article> -->
+        <article>
+            {% for post in posts%}
+                <article>
+                    <time>published: {{post.published_date}}</time>
+                    <h2><a href="">{{post.title}}</a></h2>
+                    <p>{{post.text|linebreaksbr}}</p>
+                </article>
+            {% endfor %}
         </article>
     </body>
 </html>
